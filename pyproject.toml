@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "d4be-01-blog"
+version = "0.1.0"
+description = ""
+authors = ["spackle0 <spackle0@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "d4be_01_blog"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15.8"
+bpython = "^0.23"
+isort = "^5.10.1"
+black = "^22.12.0"
+bandit = "^1.7.4"
+safety = "^2.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
