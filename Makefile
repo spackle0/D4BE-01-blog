@@ -11,14 +11,19 @@ run:
 ## DEVELOPMENT
 ##
 
+.PHONY: sqlmigrate
+sqlmigrate:
+	# Change to the migration you want to see the SQL for
+	python manage.py sqlmigrate blog 0001
+
 # Format with black and sort imports
 .PHONY: format
 format:
 	@echo =========================
 	@echo "Formatting..."
 	@echo =========================
-	#poetry run isort mysite/blog
-	poetry run black mysite/blog
+	#poetry run isort --skip migrations mysite/blog
+	poetry run black --exclude="migrations/" mysite/blog
 
 # Run unit tests
 .PHONY: test
