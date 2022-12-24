@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["spackle0 <spackle0@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "d4be_01_blog"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
